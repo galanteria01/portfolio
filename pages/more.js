@@ -1,7 +1,7 @@
 import React, { useRef } from 'react'
 import { Parallax, ParallaxLayer, IParallax } from '@react-spring/parallax'
 import Head from 'next/head'
-import { FaCaretLeft } from 'react-icons/fa'
+import { FaCaretLeft, FaLinkedin, FaGithub, FaMedium, FaTwitter } from 'react-icons/fa'
 import ThemeToggle from '../theme/ThemeToggle'
 import Link from 'next/link'
 
@@ -20,12 +20,6 @@ export default function More() {
       <main>
         <div style={{ width: '100%', height: '100%' }}>
           <Parallax ref={parallax} pages={3}>
-            <div className='flex justify-between py-4 px-4'>
-              <Link href='/'>
-                <FaCaretLeft className='text-white text-4xl' />
-              </Link>
-              <ThemeToggle />
-            </div>
             <ParallaxLayer offset={1} speed={1} />
             <ParallaxLayer offset={2} speed={1} />
 
@@ -72,21 +66,17 @@ export default function More() {
             <ParallaxLayer
               offset={2.5}
               speed={-0.4}
-              style={{
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                pointerEvents: 'none',
-              }}>
+              className='flex items-center justify-center pointer-events-none'
+            >
               <img src={url('earth')} style={{ width: '60%' }} />
             </ParallaxLayer>
 
             <ParallaxLayer
               offset={2}
               speed={-0.3}
+              className='bg-center'
               style={{
                 backgroundSize: '80%',
-                backgroundPosition: 'center',
                 backgroundImage: url('clients', true),
               }}
             />
@@ -94,6 +84,7 @@ export default function More() {
             <ParallaxLayer
               offset={0}
               speed={0.1}
+              className='flex flex-col'
             // onClick={() => parallax.current.scrollTo(1)}
             >
               <div className='flex justify-between py-4 px-4'>
@@ -102,18 +93,26 @@ export default function More() {
                 </Link>
                 <ThemeToggle />
               </div>
+              <div className='flex flex-col justify-center items-center h-full leading-6 mx-4 md:mx-0'>
+                <p className='self-center text-white text-4xl font-bold'>About</p>
+                <hr className='border-2 w-32 mb-4 text-amber' />
+                <p className='text-white text-2xl font-medium'>Hi! I'm <span className='text-amber'>21 years</span> old software developer from India.</p>
+                <p className='text-white text-2xl font-medium'>I like to pick new skills and tinker with new technologies overtime</p>
+                <p className='text-white text-2xl font-medium'>However my main focus are: </p>
+                <ul className='text-white text-xl font-medium'>
+                  <li>{'>'} Web Development: Both frontend and backend using <span className='text-amber'>React.js, Node.js, Golang</span> etc</li>
+                  <li>{'>'} Mobile App Development: Both native and cross-platform</li>
+                </ul>
+              </div>
               {/* <img src={url('server')} style={{ width: '20%' }} /> */}
             </ParallaxLayer>
 
             <ParallaxLayer
               offset={1}
               speed={0.1}
-              onClick={() => parallax.current.scrollTo(2)}
-              style={{
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-              }}>
+              // onClick={() => parallax.current.scrollTo(2)}
+              className='flex items-center justify-center'
+            >
 
               Projects
               {/* <img src={url('bash')} style={{ width: '40%' }} /> */}
@@ -122,13 +121,31 @@ export default function More() {
             <ParallaxLayer
               offset={2}
               speed={-0}
-              style={{
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-              }}
-              onClick={() => parallax.current.scrollTo(0)}>
-              Links
+              className='flex flex-col items-center justify-center mx-4 md:mx-0'
+            // onClick={() => parallax.current.scrollTo(0)}
+            >
+              <p className='self-center text-white text-4xl font-bold'>Links</p>
+              <hr className='border-2 w-32 mb-4 text-amber' />
+              <div className='flex'>
+                <Link href="https://github.com/galanteria01">
+                  <FaGithub className='text-white text-4xl mx-2 cursor-pointer' />
+                </Link>
+                <Link href='https://www.linkedin.com/in/shoury-sharma-8ba4581b1/'>
+                  <FaLinkedin className='text-white text-4xl mx-2 cursor-pointer' />
+                </Link>
+                <Link href='https://shanuu12e.medium.com/'>
+                  <FaMedium className='text-white text-4xl mx-2 cursor-pointer' />
+                </Link>
+                <Link href='https://twitter.com/shoury_sharma_'>
+                  <FaTwitter className='text-white text-4xl mx-2 cursor-pointer' />
+                </Link>
+              </div>
+              <p className='text-white font-semibold md:text-2xl my-4'>
+                Or write me at
+                <a className='text-amber mx-2' href="mailto:shanuu12e@gmail.com">
+                  shanuu12e@gmail.com
+                </a>
+              </p>
               {/* <img src={url('clients-main')} style={{ width: '40%' }} /> */}
             </ParallaxLayer>
           </Parallax>
