@@ -66,7 +66,7 @@ export default function Home() {
             <p className='text-white text-2xl md:text-4xl py-8 font-semibold my-8'>
               Hello,
             </p>
-            <p className='text-white text-4xl md:text-6xl font-bold my-4'>I'm</p>
+            <p className='text-white text-4xl md:text-6xl font-bold my-4'>I&apos;m</p>
             <p className='text-white text-4xl md:text-6xl font-bold my-4'>Shoury Sharma</p>
             <p className='text-gray-dark text-4xl md:text-6xl font-semibold my-4'>Software Developer</p>
           </div>
