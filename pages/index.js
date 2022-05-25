@@ -4,6 +4,7 @@ import Lottie from 'react-lottie'
 import * as animationData from '../assets/lottie/home.json'
 import { FaGithub } from 'react-icons/fa'
 import Link from 'next/link'
+import { motion } from 'framer-motion'
 
 const url = (name, wrap = false) =>
   `${wrap ? 'url(' : ''}https://awv3node-homepage.surge.sh/build/assets/${name}.svg${wrap ? ')' : ''}`
@@ -26,6 +27,19 @@ export default function Home() {
     "Ciao!",
   ]
 
+  const container = {
+    hidden: {
+      opacity: 0,
+    },
+    show: {
+      opacity: 1,
+      transition: {
+        delayChildren: 2,
+        staggerDirection: -1,
+      }
+    }
+  }
+
   return (
     <div className='h-screen bg-purple dark:bg-gray'>
       <Head>
@@ -34,9 +48,17 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main style={{ backgroundImage: url('stars', true), backgroundSize: 'cover' }} className='py-6 md:py-12 px-12 md:px-24 flex flex-col justify-between h-screen'>
+      <motion.main
+        tial={{ y: -800 }}
+        animate={{ y: 0 }}
+        transition={{ type: "spring", bounce: 0.25 }}
+        style={{ backgroundImage: url('stars', true), backgroundSize: 'cover' }}
+        className='py-6 md:py-12 px-12 md:px-24 flex flex-col justify-between h-screen'
+      >
         <div className='flex justify-end items-center'>
-          <button className='bg-white text-purple dark:text-gray rounded font-semibold py-2 px-4 mx-4'>Resume</button>
+          <Link target='_blank' href='https://drive.google.com/file/d/1XS1kpr2-zcpfWly0wPnphI_RyVwTqKQt/view?usp=sharing'>
+            <button className='bg-white text-purple dark:text-gray rounded font-semibold py-2 px-4 mx-4'>Resume</button>
+          </Link>
           <ThemeToggle />
         </div>
         <div className='flex md:justify-between'>
@@ -66,7 +88,7 @@ export default function Home() {
             </a>
           </div>
         </div>
-      </main>
+      </motion.main>
 
       <footer>
 

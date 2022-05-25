@@ -4,6 +4,7 @@ import Head from 'next/head'
 import { FaCaretLeft, FaLinkedin, FaGithub, FaMedium, FaTwitter } from 'react-icons/fa'
 import ThemeToggle from '../theme/ThemeToggle'
 import Link from 'next/link'
+import ProjectItem from '../components/project-item'
 
 const url = (name, wrap = false) =>
   `${wrap ? 'url(' : ''}https://awv3node-homepage.surge.sh/build/assets/${name}.svg${wrap ? ')' : ''}`
@@ -111,11 +112,48 @@ export default function More() {
               offset={1}
               speed={0.1}
               // onClick={() => parallax.current.scrollTo(2)}
-              className='flex items-center justify-center'
+              className='flex flex-col items-center justify-center'
             >
 
-              Projects
-              {/* <img src={url('bash')} style={{ width: '40%' }} /> */}
+              <p className='self-center text-white text-4xl font-bold'>Projects</p>
+              <hr className='border-2 w-36 mb-4 text-amber' />
+              <div className='grid grid-cols-2 gap-2'>
+                <ProjectItem
+                  github="https://github.com/galanteria01/notes"
+                  title="Noter"
+                  description="Clean architecture note keeping application."
+                  language="Kotlin"
+                />
+                <ProjectItem
+                  github="https://github.com/galanteria01/safetynet-checker"
+                  title="SafetyNet Checker"
+                  description="Application to tell safetynet status of device."
+                  language="Kotlin"
+                />
+                <ProjectItem
+                  github="https://github.com/galanteria01/socially-frontend"
+                  title="Socially"
+                  description="A semantic and basic social media application ."
+                  language="Javascript"
+                />
+                <ProjectItem
+                  github="https://github.com/galanteria01/sharecipe"
+                  title="Sharecipe"
+                  description="Cross Platform recipe sharing application."
+                  language="Javascript"
+                />
+                <ProjectItem
+                  github="https://github.com/galanteria01/buyspot-ecom-website"
+                  title="Buyspot"
+                  description="Django based ecommerce application for scaling."
+                  language="Javascript"
+                />
+                <ProjectItem
+                  github="https://github.com/galanteria01/distro_app"
+                  title="Distro" description="Application to suggest you distros and roms."
+                  language="Dart"
+                />
+              </div>
             </ParallaxLayer>
 
             <ParallaxLayer
