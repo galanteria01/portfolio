@@ -36,33 +36,33 @@ export default function More() {
             />
 
             <ParallaxLayer offset={1.3} speed={-0.3} style={{ pointerEvents: 'none' }}>
-              <Image alt="Next Image" src={url('satellite4')} style={{ width: '15%', marginLeft: '70%' }} />
+              <Image width={150} height={150} alt="Next Image" src={url('satellite4')} className="ml-24" style={{ width: '15%', marginLeft: '70%' }} />
             </ParallaxLayer>
 
             <ParallaxLayer offset={1} speed={0.8} style={{ opacity: 0.1 }}>
-              <Image alt="Next Image" src={url('cloud')} style={{ display: 'block', width: '20%', marginLeft: '55%' }} />
-              <Image alt="Next Image" src={url('cloud')} style={{ display: 'block', width: '10%', marginLeft: '15%' }} />
+              <Image height={200} width={200} alt="Next Image" src={url('cloud')} style={{ display: 'block', width: '20%', marginLeft: '55%' }} />
+              <Image height={100} width={100} alt="Next Image" src={url('cloud')} style={{ display: 'block', width: '10%', marginLeft: '15%' }} />
             </ParallaxLayer>
 
             <ParallaxLayer offset={1.75} speed={0.5} style={{ opacity: 0.1 }}>
-              <Image alt="Next Image" src={url('cloud')} style={{ display: 'block', width: '20%', marginLeft: '70%' }} />
-              <Image alt="Next Image" src={url('cloud')} style={{ display: 'block', width: '20%', marginLeft: '40%' }} />
+              <Image height={200} width={200} alt="Next Image" src={url('cloud')} style={{ display: 'block', width: '20%', marginLeft: '70%' }} />
+              <Image height={200} width={200} alt="Next Image" src={url('cloud')} style={{ display: 'block', width: '20%', marginLeft: '40%' }} />
             </ParallaxLayer>
 
             <ParallaxLayer offset={1} speed={0.2} style={{ opacity: 0.2 }}>
-              <Image alt="Next Image" src={url('cloud')} style={{ display: 'block', width: '10%', marginLeft: '10%' }} />
-              <Image alt="Next Image" src={url('cloud')} style={{ display: 'block', width: '20%', marginLeft: '75%' }} />
+              <Image width={100} height={100} alt="Next Image" src={url('cloud')} style={{ display: 'block', width: '10%', marginLeft: '10%' }} />
+              <Image height={200} width={200} alt="Next Image" src={url('cloud')} style={{ display: 'block', width: '20%', marginLeft: '75%' }} />
             </ParallaxLayer>
 
             <ParallaxLayer offset={1.6} speed={-0.1} style={{ opacity: 0.4 }}>
-              <Image alt="Next Image" src={url('cloud')} style={{ display: 'block', width: '20%', marginLeft: '60%' }} />
-              <Image alt="Next Image" src={url('cloud')} style={{ display: 'block', width: '25%', marginLeft: '30%' }} />
-              <Image alt="Next Image" src={url('cloud')} style={{ display: 'block', width: '10%', marginLeft: '80%' }} />
+              <Image height={200} width={200} alt="Next Image" src={url('cloud')} style={{ display: 'block', width: '20%', marginLeft: '60%' }} />
+              <Image height={250} width={250} alt="Next Image" src={url('cloud')} style={{ display: 'block', width: '25%', marginLeft: '30%' }} />
+              <Image height={100} width={100} alt="Next Image" src={url('cloud')} style={{ display: 'block', width: '10%', marginLeft: '80%' }} />
             </ParallaxLayer>
 
             <ParallaxLayer offset={2.6} speed={0.4} style={{ opacity: 0.6 }}>
-              <Image alt="Next Image" src={url('cloud')} style={{ display: 'block', width: '20%', marginLeft: '5%' }} />
-              <Image alt="Next Image" src={url('cloud')} style={{ display: 'block', width: '15%', marginLeft: '75%' }} />
+              <Image height={200} width={200} alt="Next Image" src={url('cloud')} style={{ display: 'block', width: '20%', marginLeft: '5%' }} />
+              <Image height={150} width={150} alt="Next Image" src={url('cloud')} style={{ display: 'block', width: '15%', marginLeft: '75%' }} />
             </ParallaxLayer>
 
             <ParallaxLayer
@@ -70,7 +70,7 @@ export default function More() {
               speed={-0.4}
               className='flex items-center justify-center pointer-events-none'
             >
-              <Image alt="Next Image" src={url('earth')} style={{ width: '60%' }} />
+              <Image width={600} height={600} alt="Next Image" src={url('earth')}  />
             </ParallaxLayer>
 
             <ParallaxLayer
@@ -118,7 +118,7 @@ export default function More() {
 
               <p className='self-center text-white text-4xl font-bold'>Projects</p>
               <hr className='border-2 w-36 mb-4 text-amber' />
-              <div className='grid grid-cols-2 gap-2'>
+              <div className='grid grid-cols-1 md:grid-cols-2 gap-2 mx-4 md:mx-0'>
                 <ProjectItem
                   github="https://github.com/galanteria01/notes"
                   title="Noter"
